@@ -40,9 +40,9 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:🌷♞  𝕤αт𝕒ⓝ  ☯🐺\n' 
-            + 'ORG: 🌷♞  𝕤αт𝕒ⓝ  ☯🐺;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=50373488366:+503 7348-8366\n' 
+            + 'FN:Sombras\n' 
+            + 'ORG:Sombras;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=972557223245:+972 55-722-3245\n' 
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
@@ -54,7 +54,7 @@ cr = '*ESTE BOT YA ESTÁ VERIFICADO*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["50373488366@s.whatsapp.net","50373488366@s.whatsapp.net"] 
+const ownerNumber = ["972557223245@s.whatsapp.net","972557223245@s.whatsapp.net"] 
 /************************************/
 
        
@@ -1078,7 +1078,7 @@ client.on('group-participants-update', async (anu) => {
 					n = JSON.parse(JSON.stringify(data));
 					nimek =  n[Math.floor(Math.random() * n.length)];
 					pok = await getBuffer(nimek)
-					client.sendMessage(from, pok, image, { quoted: mek, caption: `*🌷♞  𝕤αт𝕒ⓝ  ☯🐺*`})
+					client.sendMessage(from, pok, image, { quoted: mek, caption: `Sombras`})
 					await limitAdd(sender)
 					break 
 				case 'pokemon':
@@ -1277,7 +1277,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nombre del bot* : ${me.name}\n*Dueño* : *🌷♞  𝕤αт𝕒ⓝ  ☯🐺*\n*AUTHOR* : Satan\n*Numero del Bot* : @${me.jid.split('@')[0]}\n*Prefijo* : ${prefix}\n*Contactos bloqueados* : ${blocked.length}\n*Esta activo desde hace* : ${kyun(uptime)}`
+					teks = `*Nombre del bot* : ${me.name}\n*Dueño* : *SOMBRAS*\n*AUTHOR* : Satan\n*Numero del Bot* : @${me.jid.split('@')[0]}\n*Prefijo* : ${prefix}\n*Contactos bloqueados* : ${blocked.length}\n*Esta activo desde hace* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
